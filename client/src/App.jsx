@@ -37,7 +37,7 @@ function Chat({ seed, clearSeed }) {
     const next = [...base, { role: 'user', text: text.trim() }];
     setMsgs(next); setInput(''); setErr(''); setBusy(true);
     try {
-      const r = await fetch('/api/chat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ messages: next }) });
+      const r = await fetch(`${import.meta.env.VITE_API_URL}/api/careers`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ messages: next }) });
       const d = await r.json().catch(() => ({}));
       if (!r.ok) throw new Error(d.error || 'Request failed.');
       setMsgs([...next, { role: 'model', text: d.reply }]);
@@ -78,7 +78,7 @@ function Aptitude() {
 
 function Careers({ ask }) {
   const [data, setData] = useState(null); const [err, setErr] = useState(''); const [q, setQ] = useState(''); const [cat, setCat] = useState('All'); const [open, setOpen] = useState(null);
-  useEffect(() => { fetch('/api/careers').then(r => r.json()).then(d => setData(d.data)).catch(() => setErr('Could not load careers. Is the server running?')); }, []);
+  useEffect(() => { fetch(`${import.meta.env.VITE_API_URL}/api/careers`).then(r => r.json()).then(d => setData(d.data)).catch(() => setErr('Could not load careers. Is the server running?')); }, []);
   if (err) return <p className="err">{err}</p>; if (!data) return <div className="card">Loading careers…</div>;
   const cats = ['All', ...new Set(data.map(c => c.category))];
   const list = data.filter(c => (cat === 'All' || c.category === cat) && (c.title + c.skills.join(' ') + c.description).toLowerCase().includes(q.toLowerCase()));
@@ -94,7 +94,7 @@ function Careers({ ask }) {
 
 function Courses() {
   const [d, setD] = useState(null);
-  useEffect(() => { fetch('/api/courses').then(r => r.json()).then(r => setD(r.data)).catch(() => setD([])); }, []);
+  useEffect(() => { fetch(`${import.meta.env.VITE_API_URL}/api/courses`).then(r => r.json()).then(r => setD(r.data)).catch(() => setD([])); }, []);
   if (!d) return <div className="card">Loading…</div>;
   return <div className="grid">{d.map(c => <div className="card" key={c.id}><h3>{c.title}</h3><p className="muted">{c.provider} · {c.level} · {c.duration}</p><span className="tag">{c.free ? 'Free' : 'Paid'}</span><p><a href={c.url} target="_blank" rel="noreferrer">Official link</a></p></div>)}</div>;
 }
