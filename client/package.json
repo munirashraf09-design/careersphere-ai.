@@ -1,0 +1,3 @@
+{"name":"careersphere-client","private":true,"type":"module","scripts":{"dev":"vite","build":"vite build"},
+"dependencies":{"lucide-react":"^0.400.0","react":"^18.3.1","react-dom":"^18.3.1","react-markdown":"^9.0.1"},
+"devDependencies":{"@vitejs/plugin-react":"^4.3.1","vite":"^5.4.0"}}

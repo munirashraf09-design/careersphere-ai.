@@ -1,0 +1,15 @@
+// SAMPLE DATA - replace with verified records (or a MongoDB collection).
+export const careers = [
+ {id:1,title:"Full-Stack (MERN) Developer",category:"Technology",level:"12th / Diploma / Graduate",skills:["JavaScript","React","Node.js","MongoDB","Git"],description:"Builds web apps end to end.",roadmap:["HTML/CSS/JS basics","React","Node + Express","MongoDB","Deploy 3 projects"],roles:["Frontend Developer","Backend Developer"],certs:["freeCodeCamp Full Stack"],industries:["IT services","Startups"]},
+ {id:2,title:"AI / ML Engineer",category:"Technology",level:"Graduate",skills:["Python","Statistics","Machine Learning","Math"],description:"Designs and trains machine learning systems.",roadmap:["Python","Maths & statistics","scikit-learn","Deep learning","Projects"],roles:["ML Engineer","Data Scientist"],certs:["Google ML Crash Course"],industries:["Healthcare","Finance","Tech"]},
+ {id:3,title:"Cybersecurity Analyst",category:"Technology",level:"Graduate / Diploma",skills:["Networking","Linux","Security basics"],description:"Protects systems and data from attacks.",roadmap:["Networking","Linux","Security fundamentals","Hands-on labs"],roles:["SOC Analyst","Security Engineer"],certs:["CompTIA Security+"],industries:["Banking","IT","Government"]},
+ {id:4,title:"Chartered Accountant",category:"Commerce",level:"12th",skills:["Accounting","Taxation","Analytical thinking"],description:"Handles auditing, tax and financial reporting.",roadmap:["Foundation","Intermediate","Articleship","Final"],roles:["Auditor","Tax Consultant"],certs:["ICAI CA"],industries:["Finance","Consulting"]},
+ {id:5,title:"Civil Services Officer",category:"Government",level:"Graduate",skills:["General studies","Writing","Current affairs"],description:"Administrative roles in government via UPSC exams.",roadmap:["Understand syllabus","NCERT basics","Optional subject","Mock tests"],roles:["IAS","IPS","IFS"],certs:["UPSC CSE"],industries:["Public administration"]},
+ {id:6,title:"UI/UX Designer",category:"Design",level:"12th / Graduate",skills:["Figma","Research","Visual design"],description:"Designs usable, attractive digital products.",roadmap:["Design basics","Figma","User research","Portfolio"],roles:["Product Designer","UX Researcher"],certs:["Google UX Design"],industries:["Tech","Media"]}
+];
+export const courses = [
+ {id:1,title:"CS50x: Intro to Computer Science",provider:"Harvard / edX",level:"Beginner",duration:"~11 weeks",free:true,url:"https://cs50.harvard.edu/x/"},
+ {id:2,title:"Responsive Web Design",provider:"freeCodeCamp",level:"Beginner",duration:"~300 hrs",free:true,url:"https://www.freecodecamp.org/"},
+ {id:3,title:"Machine Learning Crash Course",provider:"Google",level:"Intermediate",duration:"~15 hrs",free:true,url:"https://developers.google.com/machine-learning/crash-course"},
+ {id:4,title:"Machine Learning Specialization",provider:"Coursera (DeepLearning.AI)",level:"Beginner",duration:"~2 months",free:false,url:"https://www.coursera.org/specializations/machine-learning-introduction"}
+];

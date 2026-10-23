@@ -1,0 +1,18 @@
+:root{--bg:#E9EDF4;--p:#526DFF;--s:#8B5CF6;--t:#202A44;--m:#778198;--raise:6px 6px 14px #c9cfdc,-6px -6px 14px #fff;--inset:inset 4px 4px 9px #c9cfdc,inset -4px -4px 9px #fff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--t);font-family:Inter,system-ui,sans-serif}
+nav{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:16px 24px}nav b{margin-right:auto;font-size:20px;display:flex;gap:8px;align-items:center}
+main{max-width:1000px;margin:0 auto;padding:16px 24px 48px}
+.card{background:var(--bg);border-radius:20px;box-shadow:var(--raise);padding:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+button,.btn{font:inherit;border:0;cursor:pointer;background:var(--bg);color:var(--t);border-radius:16px;padding:10px 18px;box-shadow:var(--raise);display:inline-flex;gap:6px;align-items:center;transition:.15s;text-decoration:none}
+button:hover{color:var(--p)}button:active,button.on{box-shadow:var(--inset);color:var(--p)}
+button.primary{background:var(--p);color:#fff}button:disabled{opacity:.5;cursor:not-allowed}
+input,textarea,select{font:inherit;width:100%;border:0;border-radius:16px;padding:12px 16px;background:var(--bg);box-shadow:var(--inset);color:var(--t)}
+button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--p)}
+h1{font-size:40px;line-height:1.15;margin:8px 0}.muted{color:var(--m)}.tag{display:inline-block;background:var(--bg);box-shadow:var(--inset);border-radius:12px;padding:2px 10px;margin:2px;font-size:12px}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}.warn{background:#fff7e0;border-radius:14px;padding:10px 14px;font-size:13px;margin:12px 0}
+.chat{height:420px;overflow:auto;display:flex;flex-direction:column;gap:12px;padding:16px;border-radius:20px;box-shadow:var(--inset)}
+.msg{max-width:85%;padding:12px 16px;border-radius:18px;box-shadow:var(--raise)}.msg.user{align-self:flex-end;background:var(--p);color:#fff}.msg p{margin:4px 0}
+.err{color:#b3261e;font-size:14px}.bar{height:10px;border-radius:8px;box-shadow:var(--inset)}.bar i{display:block;height:100%;border-radius:8px;background:linear-gradient(90deg,var(--p),var(--s))}
+.dots span{animation:b 1s infinite;display:inline-block}.dots span:nth-child(2){animation-delay:.2s}.dots span:nth-child(3){animation-delay:.4s}@keyframes b{50%{opacity:.2}}
+@media(max-width:600px){h1{font-size:30px}}
